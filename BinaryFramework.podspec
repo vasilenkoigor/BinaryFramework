@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|  
     s.name              = 'BinaryFramework'
-    s.version           = '0.0.2'
+    s.version           = '0.0.3'
     s.summary           = 'Summary'
     s.homepage          = 'https://homepage.com/'
 
