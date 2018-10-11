@@ -6,12 +6,37 @@
 	objectVersion = 50;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		FF3E493B216FFED10092FBC8 /* BinaryFramework-Aggregate */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = FF3E493E216FFED10092FBC8 /* Build configuration list for PBXAggregateTarget "BinaryFramework-Aggregate" */;
+			buildPhases = (
+				FF3E4941216FFEE80092FBC8 /* ShellScript */,
+			);
+			dependencies = (
+				FF3E4940216FFEDB0092FBC8 /* PBXTargetDependency */,
+			);
+			name = "BinaryFramework-Aggregate";
+			productName = "BinaryFramework-Aggregate";
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		696405B4435A9DD610965675 /* Pods_BinaryFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81A65446F2F7D5BED7CE9658 /* Pods_BinaryFramework.framework */; };
 		FF141B00216FD5AB002E2E37 /* BinaryFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = FF141AFE216FD5AB002E2E37 /* BinaryFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FF141B08216FD751002E2E37 /* RequestExecutor.h in Headers */ = {isa = PBXBuildFile; fileRef = FF141B06216FD751002E2E37 /* RequestExecutor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FF141B09216FD751002E2E37 /* RequestExecutor.m in Sources */ = {isa = PBXBuildFile; fileRef = FF141B07216FD751002E2E37 /* RequestExecutor.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FF3E493F216FFEDB0092FBC8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FF141AF2216FD5AB002E2E37 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FF141AFA216FD5AB002E2E37;
+			remoteInfo = BinaryFramework;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		16E48379F7E2BF1D662F5DC3 /* Pods-BinaryFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BinaryFramework.release.xcconfig"; path = "Pods/Target Support Files/Pods-BinaryFramework/Pods-BinaryFramework.release.xcconfig"; sourceTree = "<group>"; };
@@ -128,6 +153,9 @@
 					FF141AFA216FD5AB002E2E37 = {
 						CreatedOnToolsVersion = 10.0;
 					};
+					FF3E493B216FFED10092FBC8 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
 				};
 			};
 			buildConfigurationList = FF141AF5216FD5AB002E2E37 /* Build configuration list for PBXProject "BinaryFramework" */;
@@ -143,6 +171,7 @@
 			projectRoot = "";
 			targets = (
 				FF141AFA216FD5AB002E2E37 /* BinaryFramework */,
+				FF3E493B216FFED10092FBC8 /* BinaryFramework-Aggregate */,
 			);
 		};
 /* End PBXProject section */
@@ -163,15 +192,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-BinaryFramework-checkManifestLockResult.txt",
 			);
@@ -179,6 +204,19 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		FF3E4941216FFEE80092FBC8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "######################\n# Options\n######################\nNULL=\n\nREVEAL_ARCHIVE_IN_FINDER=false\n\nFRAMEWORK_NAME=\"${PROJECT_NAME}\"\n\nSIMULATOR_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${FRAMEWORK_NAME}.framework\"\n\nDEVICE_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${FRAMEWORK_NAME}.framework\"\n\nUNIVERSAL_LIBRARY_DIR=\"${BUILD_DIR}/${CONFIGURATION}-iphoneuniversal\"\n\nFRAMEWORK=\"${UNIVERSAL_LIBRARY_DIR}/${FRAMEWORK_NAME}.framework\"\n\n\n######################\n# Build Frameworks\n######################\nxcodebuild -workspace ${PROJECT_NAME}.xcworkspace -scheme ${PROJECT_NAME} -sdk iphonesimulator -configuration ${CONFIGURATION} clean build CONFIGURATION_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}-iphonesimulator 2>&1\nxcodebuild -workspace ${PROJECT_NAME}.xcworkspace -scheme ${PROJECT_NAME} -sdk iphoneos -configuration ${CONFIGURATION} clean build CONFIGURATION_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}-iphoneos 2>&1\n\n######################\n# Create directory for universal\n######################\n\nrm -rf \"${UNIVERSAL_LIBRARY_DIR}\"\n\nmkdir \"${UNIVERSAL_LIBRARY_DIR}\"\n\nmkdir \"${FRAMEWORK}\"\n\n\n######################\n# Copy files Framework\n######################\n\ncp -r \"${DEVICE_LIBRARY_PATH}/.\" \"${FRAMEWORK}\"\n\n\n######################\n# Make an universal binary\n######################\n\nlipo \"${SIMULATOR_LIBRARY_PATH}/${FRAMEWORK_NAME}\" \"${DEVICE_LIBRARY_PATH}/${FRAMEWORK_NAME}\" -create -output \"${FRAMEWORK}/${FRAMEWORK_NAME}\" | echo\n\n# For Swift framework, Swiftmodule needs to be copied in the universal framework\nif [ -d \"${SIMULATOR_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" ]; then\ncp -f ${SIMULATOR_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule\\/${NULL}* \"${FRAMEWORK}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" | echo\nfi\n\nif [ -d \"${DEVICE_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" ]; then\ncp -f ${DEVICE_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule\\/${NULL}* \"${FRAMEWORK}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" | echo\nfi\n\n######################\n# On Release, copy the result to release directory\n######################\nOUTPUT_DIR=\"${PROJECT_DIR}/Output\"\nTARGET_DIR=\"${OUTPUT_DIR}/${FRAMEWORK_NAME}-${CONFIGURATION}-iphoneuniversal/\"\n\nrm -rf \"$TARGET_DIR\"\nmkdir -p \"$TARGET_DIR\"\n\ncp -rf \"${FRAMEWORK}\" \"$OUTPUT_DIR\"\ncp -r \"${FRAMEWORK}\" \"$TARGET_DIR\"\n\nif [ ${REVEAL_ARCHIVE_IN_FINDER} = true ]; then\nopen \"${OUTPUT_DIR}/\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -192,6 +230,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FF3E4940216FFEDB0092FBC8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FF141AFA216FD5AB002E2E37 /* BinaryFramework */;
+			targetProxy = FF3E493F216FFEDB0092FBC8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		FF141B01216FD5AB002E2E37 /* Debug */ = {
@@ -360,6 +406,22 @@
 			};
 			name = Release;
 		};
+		FF3E493C216FFED10092FBC8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FF3E493D216FFED10092FBC8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -377,6 +439,15 @@
 			buildConfigurations = (
 				FF141B04216FD5AB002E2E37 /* Debug */,
 				FF141B05216FD5AB002E2E37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF3E493E216FFED10092FBC8 /* Build configuration list for PBXAggregateTarget "BinaryFramework-Aggregate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF3E493C216FFED10092FBC8 /* Debug */,
+				FF3E493D216FFED10092FBC8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
