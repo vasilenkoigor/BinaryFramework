@@ -8,7 +8,7 @@
 
 #import "RequestExecutor.h"
 
-#import <AFNetworking/AFURLSessionManager.h>
+#import "AFURLSessionManager.h"
 
 @interface RequestExecutor ()
 

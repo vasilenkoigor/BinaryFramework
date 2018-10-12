@@ -22,10 +22,23 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		FF022F1D21709FA700A9A864 /* AFSecurityPolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = FF022F0F21709FA700A9A864 /* AFSecurityPolicy.h */; };
+		FF022F1E21709FA700A9A864 /* AFNetworkReachabilityManager.h in Headers */ = {isa = PBXBuildFile; fileRef = FF022F1021709FA700A9A864 /* AFNetworkReachabilityManager.h */; };
+		FF022F1F21709FA700A9A864 /* AFURLSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = FF022F1121709FA700A9A864 /* AFURLSessionManager.h */; };
+		FF022F2021709FA700A9A864 /* AFURLRequestSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = FF022F1221709FA700A9A864 /* AFURLRequestSerialization.h */; };
+		FF022F2121709FA700A9A864 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = FF022F1321709FA700A9A864 /* AFURLResponseSerialization.m */; };
+		FF022F2221709FA700A9A864 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FF022F1421709FA700A9A864 /* AFHTTPSessionManager.m */; };
+		FF022F2321709FA700A9A864 /* AFURLResponseSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = FF022F1521709FA700A9A864 /* AFURLResponseSerialization.h */; };
+		FF022F2421709FA700A9A864 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FF022F1621709FA700A9A864 /* AFURLSessionManager.m */; };
+		FF022F2521709FA700A9A864 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = FF022F1721709FA700A9A864 /* AFURLRequestSerialization.m */; };
+		FF022F2621709FA700A9A864 /* AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = FF022F1821709FA700A9A864 /* AFNetworking.h */; };
+		FF022F2721709FA700A9A864 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FF022F1921709FA700A9A864 /* AFNetworkReachabilityManager.m */; };
+		FF022F2821709FA700A9A864 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = FF022F1A21709FA700A9A864 /* AFSecurityPolicy.m */; };
+		FF022F2921709FA700A9A864 /* AFCompatibilityMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = FF022F1B21709FA700A9A864 /* AFCompatibilityMacros.h */; };
+		FF022F2A21709FA700A9A864 /* AFHTTPSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = FF022F1C21709FA700A9A864 /* AFHTTPSessionManager.h */; };
 		FF141B00216FD5AB002E2E37 /* BinaryFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = FF141AFE216FD5AB002E2E37 /* BinaryFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FF141B08216FD751002E2E37 /* RequestExecutor.h in Headers */ = {isa = PBXBuildFile; fileRef = FF141B06216FD751002E2E37 /* RequestExecutor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FF141B09216FD751002E2E37 /* RequestExecutor.m in Sources */ = {isa = PBXBuildFile; fileRef = FF141B07216FD751002E2E37 /* RequestExecutor.m */; };
-		FF868A242170972F00E65015 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF868A232170972F00E65015 /* AFNetworking.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,12 +52,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FF022F0F21709FA700A9A864 /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
+		FF022F1021709FA700A9A864 /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		FF022F1121709FA700A9A864 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
+		FF022F1221709FA700A9A864 /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLRequestSerialization.h; sourceTree = "<group>"; };
+		FF022F1321709FA700A9A864 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
+		FF022F1421709FA700A9A864 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
+		FF022F1521709FA700A9A864 /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLResponseSerialization.h; sourceTree = "<group>"; };
+		FF022F1621709FA700A9A864 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		FF022F1721709FA700A9A864 /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLRequestSerialization.m; sourceTree = "<group>"; };
+		FF022F1821709FA700A9A864 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		FF022F1921709FA700A9A864 /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		FF022F1A21709FA700A9A864 /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
+		FF022F1B21709FA700A9A864 /* AFCompatibilityMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFCompatibilityMacros.h; sourceTree = "<group>"; };
+		FF022F1C21709FA700A9A864 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
 		FF141AFB216FD5AB002E2E37 /* BinaryFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BinaryFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF141AFE216FD5AB002E2E37 /* BinaryFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BinaryFramework.h; sourceTree = "<group>"; };
 		FF141AFF216FD5AB002E2E37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF141B06216FD751002E2E37 /* RequestExecutor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RequestExecutor.h; sourceTree = "<group>"; };
 		FF141B07216FD751002E2E37 /* RequestExecutor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RequestExecutor.m; sourceTree = "<group>"; };
-		FF868A232170972F00E65015 /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = Carthage/Build/iOS/AFNetworking.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +78,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF868A242170972F00E65015 /* AFNetworking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,9 +87,37 @@
 		D9095A48D374173F80316421 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FF868A232170972F00E65015 /* AFNetworking.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FF022F0D21709FA700A9A864 /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				FF022F0E21709FA700A9A864 /* AFNetworking */,
+			);
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
+		FF022F0E21709FA700A9A864 /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				FF022F0F21709FA700A9A864 /* AFSecurityPolicy.h */,
+				FF022F1021709FA700A9A864 /* AFNetworkReachabilityManager.h */,
+				FF022F1121709FA700A9A864 /* AFURLSessionManager.h */,
+				FF022F1221709FA700A9A864 /* AFURLRequestSerialization.h */,
+				FF022F1321709FA700A9A864 /* AFURLResponseSerialization.m */,
+				FF022F1421709FA700A9A864 /* AFHTTPSessionManager.m */,
+				FF022F1521709FA700A9A864 /* AFURLResponseSerialization.h */,
+				FF022F1621709FA700A9A864 /* AFURLSessionManager.m */,
+				FF022F1721709FA700A9A864 /* AFURLRequestSerialization.m */,
+				FF022F1821709FA700A9A864 /* AFNetworking.h */,
+				FF022F1921709FA700A9A864 /* AFNetworkReachabilityManager.m */,
+				FF022F1A21709FA700A9A864 /* AFSecurityPolicy.m */,
+				FF022F1B21709FA700A9A864 /* AFCompatibilityMacros.h */,
+				FF022F1C21709FA700A9A864 /* AFHTTPSessionManager.h */,
+			);
+			path = AFNetworking;
 			sourceTree = "<group>";
 		};
 		FF141AF1216FD5AB002E2E37 = {
@@ -91,6 +144,7 @@
 				FF141AFF216FD5AB002E2E37 /* Info.plist */,
 				FF141B06216FD751002E2E37 /* RequestExecutor.h */,
 				FF141B07216FD751002E2E37 /* RequestExecutor.m */,
+				FF022F0D21709FA700A9A864 /* ThirdParty */,
 			);
 			path = BinaryFramework;
 			sourceTree = "<group>";
@@ -102,6 +156,14 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF022F2021709FA700A9A864 /* AFURLRequestSerialization.h in Headers */,
+				FF022F1F21709FA700A9A864 /* AFURLSessionManager.h in Headers */,
+				FF022F2A21709FA700A9A864 /* AFHTTPSessionManager.h in Headers */,
+				FF022F2921709FA700A9A864 /* AFCompatibilityMacros.h in Headers */,
+				FF022F1D21709FA700A9A864 /* AFSecurityPolicy.h in Headers */,
+				FF022F2621709FA700A9A864 /* AFNetworking.h in Headers */,
+				FF022F1E21709FA700A9A864 /* AFNetworkReachabilityManager.h in Headers */,
+				FF022F2321709FA700A9A864 /* AFURLResponseSerialization.h in Headers */,
 				FF141B00216FD5AB002E2E37 /* BinaryFramework.h in Headers */,
 				FF141B08216FD751002E2E37 /* RequestExecutor.h in Headers */,
 			);
@@ -118,7 +180,6 @@
 				FF141AF7216FD5AB002E2E37 /* Sources */,
 				FF141AF8216FD5AB002E2E37 /* Frameworks */,
 				FF141AF9216FD5AB002E2E37 /* Resources */,
-				FF868A252170975A00E65015 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -188,21 +249,6 @@
 			shellPath = /bin/sh;
 			shellScript = "######################\n# Options\n######################\nNULL=\n\nREVEAL_ARCHIVE_IN_FINDER=false\n\nFRAMEWORK_NAME=\"${PROJECT_NAME}\"\n\nSIMULATOR_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${FRAMEWORK_NAME}.framework\"\n\nDEVICE_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${FRAMEWORK_NAME}.framework\"\n\nUNIVERSAL_LIBRARY_DIR=\"${BUILD_DIR}/${CONFIGURATION}-iphoneuniversal\"\n\nFRAMEWORK=\"${UNIVERSAL_LIBRARY_DIR}/${FRAMEWORK_NAME}.framework\"\n\n\n######################\n# Build Frameworks\n######################\nxcodebuild -project ${PROJECT_NAME}.xcodeproj -scheme ${PROJECT_NAME} -sdk iphonesimulator -configuration ${CONFIGURATION} clean build CONFIGURATION_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}-iphonesimulator 2>&1\nxcodebuild -project ${PROJECT_NAME}.xcodeproj -scheme ${PROJECT_NAME} -sdk iphoneos -configuration ${CONFIGURATION} clean build CONFIGURATION_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}-iphoneos 2>&1\n\n######################\n# Create directory for universal\n######################\n\nrm -rf \"${UNIVERSAL_LIBRARY_DIR}\"\n\nmkdir \"${UNIVERSAL_LIBRARY_DIR}\"\n\nmkdir \"${FRAMEWORK}\"\n\n\n######################\n# Copy files Framework\n######################\n\ncp -r \"${DEVICE_LIBRARY_PATH}/.\" \"${FRAMEWORK}\"\n\n\n######################\n# Make an universal binary\n######################\n\nlipo \"${SIMULATOR_LIBRARY_PATH}/${FRAMEWORK_NAME}\" \"${DEVICE_LIBRARY_PATH}/${FRAMEWORK_NAME}\" -create -output \"${FRAMEWORK}/${FRAMEWORK_NAME}\" | echo\n\n# For Swift framework, Swiftmodule needs to be copied in the universal framework\nif [ -d \"${SIMULATOR_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" ]; then\ncp -f ${SIMULATOR_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule\\/${NULL}* \"${FRAMEWORK}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" | echo\nfi\n\nif [ -d \"${DEVICE_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" ]; then\ncp -f ${DEVICE_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule\\/${NULL}* \"${FRAMEWORK}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" | echo\nfi\n\n######################\n# On Release, copy the result to release directory\n######################\nOUTPUT_DIR=\"${PROJECT_DIR}/Output\"\nTARGET_DIR=\"${OUTPUT_DIR}/${FRAMEWORK_NAME}-${CONFIGURATION}-iphoneuniversal/\"\n\nrm -rf \"$TARGET_DIR\"\nmkdir -p \"$TARGET_DIR\"\n\ncp -rf \"${FRAMEWORK}\" \"$OUTPUT_DIR\"\ncp -r \"${FRAMEWORK}\" \"$TARGET_DIR\"\n\nif [ ${REVEAL_ARCHIVE_IN_FINDER} = true ]; then\nopen \"${OUTPUT_DIR}/\"\nfi\n";
 		};
-		FF868A252170975A00E65015 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/AFNetworking.framework",
-			);
-			outputPaths = (
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/AFNetworking.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -210,6 +256,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF022F2821709FA700A9A864 /* AFSecurityPolicy.m in Sources */,
+				FF022F2221709FA700A9A864 /* AFHTTPSessionManager.m in Sources */,
+				FF022F2421709FA700A9A864 /* AFURLSessionManager.m in Sources */,
+				FF022F2521709FA700A9A864 /* AFURLRequestSerialization.m in Sources */,
+				FF022F2121709FA700A9A864 /* AFURLResponseSerialization.m in Sources */,
+				FF022F2721709FA700A9A864 /* AFNetworkReachabilityManager.m in Sources */,
 				FF141B09216FD751002E2E37 /* RequestExecutor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
